@@ -37,7 +37,7 @@ const props = defineProps<{
     icon: String
 }>()
 
-const iconSrc = computed(() => {
+const iconSrc = computed<string>(() => {
     return icons[props.icon];
 })
 </script>

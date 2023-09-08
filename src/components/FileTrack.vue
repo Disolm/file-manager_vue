@@ -17,7 +17,7 @@ export default defineComponent({
         renderUi(name: string, obj: IFolderTree, fullPath: TypePath) {
             const keyEl: string = generateId()
             return (<>
-                <UiFileOrFolder directory={obj} key={keyEl}>
+                <UiFileOrFolder directory={obj} key={keyEl} path={fullPath}>
                     {name}
                 </UiFileOrFolder>
                 <div class="file-track__tab">
@@ -38,7 +38,7 @@ export default defineComponent({
     render() {
         return (
             <div class='file-track'>
-                {this.readFilesAndFoldersInFolder(this.dataFiles, pathNull)}
+                {this.readFilesAndFoldersInFolder(this.dataFiles.files, pathNull)}
             </div>
         )
     }

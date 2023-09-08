@@ -3,6 +3,6 @@
 
 <template>
     <div class="home-view">
-        homeView.vue
+<!--        Домашняя страница в данном приложение не нужна. -->
     </div>
 </template>

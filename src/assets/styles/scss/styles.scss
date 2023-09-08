@@ -1,0 +1,11 @@
+@mixin click-icon {
+    cursor: pointer;
+
+    &:hover {
+        background: var(--grey);
+    }
+
+    &:active {
+        background: var(--grey-3);
+    }
+}

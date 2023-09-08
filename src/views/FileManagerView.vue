@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref} from 'vue'
+import {computed, ref} from 'vue'
 import type {Ref} from 'vue'
 import {RouterView} from "vue-router";
 import UiSidebarGrid from "@/components/UiSidebarGrid.vue";
@@ -11,10 +11,11 @@ import { useStore } from 'vuex'
 
 const store = useStore()
 const loading:Ref<boolean> = ref(true);
-const filesTree:Ref<IFolderTree | null> = ref(null);
+const filesTree = computed<IFolderTree>(() => {
+    return store.getters.getFileData
+});
 (async () => {
     await store.dispatch('fetchFile')
-    filesTree.value = await store.getters.getFileData
     loading.value = false
 })()
 
@@ -38,10 +39,10 @@ const filesTree:Ref<IFolderTree | null> = ref(null);
 
 <style scoped lang="scss">
 .file-manager{
+    width: 100vw;
     flex: 1 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    //grid-column-gap: 4px;
 }
 </style>

@@ -3,14 +3,10 @@ import {klona} from "klona";
 
 export type State = {
     filesTree: object | null | undefined,
-    filesTreeCopy: object | null | undefined,
-    statusLoading: object | null,
     finallyRequest: boolean
 }
 const state: State = {
     filesTree: null,
-    filesTreeCopy: null,
-    statusLoading: null,
     finallyRequest: false
 }
 
@@ -37,8 +33,10 @@ export const conditionPath = {
                 .finally(() => state.finallyRequest = true)
         },
 
+
     },
     getters: {
+        //так как backend отсутствует, то и отправлять изменённые данные не нет возможности.
         sendingFileToServer(state: State) {
             const serverURL: string = "http://localhost:8081/";
             axios.post(serverURL, {
@@ -54,15 +52,5 @@ export const conditionPath = {
         getFileData(state: State) {
             return state.filesTree
         },
-        getIsLoadingFile(state: State) {
-            if (state.filesTree) {
-                return 'Файл загружен'
-            } else {
-                return 'Файл не загружен'
-            }
-        },
-        getStatusLoading(state: State) {
-            return state.finallyRequest
-        }
     }
 }

@@ -1,51 +1,53 @@
 {
-  "Dir 1": {
-    "id": "",
-    "type": "directory",
-    "files": {
-      "Dir 1-1": {
-        "id": "",
-        "type": "directory",
-        "files": {
-          "File 1-1-1": {
-            "id": "",
-            "type": "file",
-            "size": ""
+  "files": {
+    "Dir 1": {
+      "id": "",
+      "type": "directory",
+      "files": {
+        "Dir 1-1": {
+          "id": "",
+          "type": "directory",
+          "files": {
+            "File 1-1-1": {
+              "id": "",
+              "type": "file",
+              "size": ""
+            }
           }
+        },
+        "File 1-1": {
+          "id": "",
+          "type": "file",
+          "size": ""
         }
-      },
-      "File 1-1": {
-        "id": "",
-        "type": "file",
-        "size": ""
       }
-    }
-  },
-  "Dir 2": {
-    "id": "",
-    "type": "directory",
-    "files": {
-      "Dir 2-1": {
-        "id": "",
-        "type": "directory",
-        "files": {
-          "File 2-1-1": {
-            "id": "",
-            "type": "file",
-            "size": ""
+    },
+    "Dir 2": {
+      "id": "",
+      "type": "directory",
+      "files": {
+        "Dir 2-1": {
+          "id": "",
+          "type": "directory",
+          "files": {
+            "File 2-1-1": {
+              "id": "",
+              "type": "file",
+              "size": ""
+            }
           }
+        },
+        "File 2-1": {
+          "id": "",
+          "type": "file",
+          "size": ""
         }
-      },
-      "File 2-1": {
-        "id": "",
-        "type": "file",
-        "size": ""
       }
+    },
+    "Dir 3": {
+      "id": "",
+      "type": "directory",
+      "files": {}
     }
-  },
-  "Dir 3": {
-    "id": "",
-    "type": "directory",
-    "files": {}
   }
 }

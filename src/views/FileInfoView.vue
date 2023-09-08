@@ -9,7 +9,6 @@
 </template>
 <style lang="scss" scoped>
 .file-info-empty-view {
-    //width: $width-file-view;
     height: 100%;
     display: flex;
     flex-direction: row;
