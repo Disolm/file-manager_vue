@@ -43,12 +43,12 @@ const openOrCloseNameEditor = () => {
 const deletePartTree = () => {
     const pathLength: number = props.path.length
     const fullPath: TypePath = props.path
-    let partOfTree: object = store.getters.getFileData
+    let partOfTree: any = store.getters.getFileData
     fullPath.forEach((path, idx) => {
         if (idx < (pathLength - 1)) {
             partOfTree = partOfTree.files[path]
         } else {
-            const arrKeyValue = Object.entries(partOfTree.files)
+            const arrKeyValue: [string, (string | {})][] = Object.entries(partOfTree.files)
             const newArrKeyValue = arrKeyValue.filter(item => {
                 return item[0] !== fullPath[pathLength - 1];
 

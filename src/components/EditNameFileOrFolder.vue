@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import UiInput from "@/components/UiInput.vue";
-import {TypePath} from "@/types/types";
+import type {IFolderTree, TypePath} from "@/types/types";
 import {computed} from 'vue'
 import {useStore} from "vuex";
 import {klona} from "klona";
@@ -15,7 +15,7 @@ interface IProps {
 const props = defineProps<IProps>()
 const emit = defineEmits(['closeEdit'])
 
-const filesTree: object = klona(store.getters.getFileData)
+const filesTree: IFolderTree = klona(store.getters.getFileData)
 const nameOld:string = props.path[props.path.length - 1]
 let nameNew:string = nameOld
 
@@ -30,12 +30,12 @@ const nameCurrent = computed<string>({
 const saveChangeName = () => {
     const pathLength: number = props.path.length
     const fullPath: TypePath = props.path
-    let partOfTree: object = filesTree
+    let partOfTree: any = filesTree
     fullPath.forEach((path, idx) => {
         if (idx < (pathLength - 1)) {
             partOfTree = partOfTree.files[path]
         } else {
-            const arrKeyValue = Object.entries(partOfTree.files)
+            const arrKeyValue: [string, (string | {})][] = Object.entries(partOfTree.files)
             const newArrKeyValue = arrKeyValue.map(item => {
                 if(item[0] === nameOld) {
                     item.shift()
@@ -52,7 +52,7 @@ const saveChangeName = () => {
     emit('closeEdit')
 }
 const nameMatchingCheck = () => {
-    let partOfTree: object = klona(filesTree)
+    let partOfTree: any = klona(filesTree)
     const fullPath: TypePath = props.path
     return fullPath.some((path, idx) => {
         if (idx < (fullPath.length - 1)) {

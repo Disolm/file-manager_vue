@@ -27,11 +27,11 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "vite/client"
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     },
     "filesGlob": [
@@ -41,7 +41,8 @@
       "esnext",
       "dom",
       "dom.iterable",
-      "scripthost"
+      "scripthost",
+      "ES2022"
     ]
   },
   "include": [
@@ -54,10 +55,11 @@
   ],
   "exclude": [
     "node_modules",
-    ".vscode"
+    ".vscode",
+    "src/**/*.spec.ts"
   ],
   "types": [
     "./types/vue/",
-    "./types/vue-router/"
+    "./types/vue-router/",
   ]
 }

@@ -1,16 +1,16 @@
 <script lang="tsx">
 import {defineComponent} from 'vue'
+import type { PropType,  } from 'vue'
 import UiFileOrFolder from "@/components/UiFileOrFolder.vue";
-import {generateId} from "../../plugins/generatorId";
+import {generateId} from "@/plugins/generatorId";
 import type {IFolderTree, TypePath} from '@/types/types'
-const pathNull = []
+const pathNull: TypePath = []
 export default defineComponent({
     name: 'file-track',
     props: {
         dataFiles: {
-            type: Object,
+            type: Object as PropType<IFolderTree>,
             required: true,
-            default: () => ({})
         }
     },
     methods: {
@@ -29,16 +29,17 @@ export default defineComponent({
             </>)
         },
         readFilesAndFoldersInFolder(data: IFolderTree, path: TypePath) {
-            return Object.entries(data).map(([keyItem, valueItem]) => {
-                const fullPath: TypePath = path.concat([keyItem])
-                return this.renderUi(keyItem, valueItem as IFolderTree, fullPath)
+            const arrKeyValue: [string, (string | {})][] = Object.entries(data)
+            return arrKeyValue.map(([keyItem, valueItem]) => {
+                const fullPath: TypePath = (path as string[]).concat([keyItem])
+                return this.renderUi(keyItem as string, valueItem as IFolderTree, fullPath)
             })
         },
     },
     render() {
         return (
             <div class='file-track'>
-                {this.readFilesAndFoldersInFolder(this.dataFiles.files, pathNull)}
+                {this.readFilesAndFoldersInFolder(this.dataFiles.files as IFolderTree, pathNull)}
             </div>
         )
     }

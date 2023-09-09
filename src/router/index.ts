@@ -1,7 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import type {Router} from 'vue-router'
 
-// import HomeView from '../views/HomeView.vue'
 import FileInfoEmptyView from "@/views/FileInfoEmptyView.vue";
 import FileInfoView from "@/views/FileInfoView.vue";
 
