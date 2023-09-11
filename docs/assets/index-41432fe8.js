@@ -3760,13 +3760,13 @@ const Kf = at(Df, [["render", Hf], ["__scopeId", "data-v-edb55016"]]), qf = ef({
     routes: [{path: "/", name: "home", redirect: {name: "file-manager"}}, {
         path: "/fileManager",
         name: "file-manager",
-        component: () => Eo(() => import("https://disolm.github.io/file-manager_vue/FileManagerView-421d3220.js"), ["https://disolm.github.io/file-manager_vue/assets/FileManagerView-421d3220.js", "https://disolm.github.io/file-manager_vue/assets/FileManagerView-2fb1c931.css"]),
+        component: () => Eo(() => import("https://disolm.github.io/file-manager_vue/assets/FileManagerView-421d3220.js"), ["https://disolm.github.io/file-manager_vue/assets/FileManagerView-421d3220.js", "https://disolm.github.io/file-manager_vue/assets/FileManagerView-2fb1c931.css"]),
         redirect: {name: "file.empty"},
         children: [{path: "", name: "file.empty", component: jf}, {path: ":pathId", name: "file.info", component: Kf}]
     }, {
         path: "/:pathMatch(.*)*",
         name: "NotFound",
-        component: () => Eo(() => import("https://disolm.github.io/file-manager_vue/NotFoundView-e536de7b.js"), ["https://disolm.github.io/file-manager_vue/assets/NotFoundView-e536de7b.js", "https://disolm.github.io/file-manager_vue/assets/NotFoundView-071816b8.css"])
+        component: () => Eo(() => import("https://disolm.github.io/file-manager_vue/assets/NotFoundView-e536de7b.js"), ["https://disolm.github.io/file-manager_vue/assets/NotFoundView-e536de7b.js", "https://disolm.github.io/file-manager_vue/assets/NotFoundView-071816b8.css"])
     }]
 });/*!
  * vuex v4.0.2
