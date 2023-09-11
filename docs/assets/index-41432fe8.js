@@ -3757,11 +3757,11 @@ function Hf(e, t) {
 }
 
 const Kf = at(Df, [["render", Hf], ["__scopeId", "data-v-edb55016"]]), qf = ef({
-    history: ya("/"),
-    routes: [{path: "/", name: "home", redirect: {name: "file-manager"}}, {
-        path: "/fileManager",
+    history: ya("https://disolm.github.io/file-manager_vue/"),
+    routes: [{path: "https://disolm.github.io/file-manager_vue/", name: "home", redirect: {name: "file-manager"}}, {
+        path: "https://disolm.github.io/file-manager_vue/fileManager",
         name: "file-manager",
-        component: () => Eo(() => import("./FileManagerView-421d3220.js"), ["assets/FileManagerView-421d3220.js", "assets/FileManagerView-2fb1c931.css"]),
+        component: () => Eo(() => import("https://disolm.github.io/file-manager_vue/assets/FileManagerView-421d3220.js"), ["https://disolm.github.io/file-manager_vue/assets/FileManagerView-421d3220.js", "https://disolm.github.io/file-manager_vue/assets/FileManagerView-2fb1c931.css"]),
         redirect: {name: "file.empty"},
         children: [{path: "", name: "file.empty", component: jf}, {path: ":pathId", name: "file.info", component: Kf}]
     },
