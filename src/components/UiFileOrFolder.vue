@@ -4,9 +4,8 @@ import {computed, ref} from 'vue'
 import type {Ref} from 'vue'
 import type {IFolderTree, TypePath} from '@/types/types'
 import EditNameFileOrFolder from "@/components/EditNameFileOrFolder.vue";
-import {useStore} from "vuex";
+import DeletePartTree from "@/components/DeletePartTree.vue";
 
-const store = useStore()
 
 interface IProps {
     directory: IFolderTree,
@@ -40,23 +39,6 @@ const openOrCloseNameEditor = () => {
     nameEdited.value = !nameEdited.value
 }
 
-const deletePartTree = () => {
-    const pathLength: number = props.path.length
-    const fullPath: TypePath = props.path
-    let partOfTree: any = store.getters.getFileData
-    fullPath.forEach((path, idx) => {
-        if (idx < (pathLength - 1)) {
-            partOfTree = partOfTree.files[path]
-        } else {
-            const arrKeyValue: [string, (string | {})][] = Object.entries(partOfTree.files)
-            const newArrKeyValue = arrKeyValue.filter(item => {
-                return item[0] !== fullPath[pathLength - 1];
-
-            })
-            partOfTree.files = Object.fromEntries(newArrKeyValue)
-        }
-    })
-}
 </script>
 
 <template>
@@ -91,11 +73,9 @@ const deletePartTree = () => {
         <!--            icon="add-folder"-->
         <!--            class="file-or-folder__icon file-or-folder__icon_click"-->
         <!--        />-->
-        <UiIcon
-            @click="deletePartTree"
+        <DeletePartTree
             v-if="!nameEdited"
-            icon="trash-bin"
-            class="file-or-folder__icon file-or-folder__icon_click"
+            :path="path"
         />
     </div>
 </template>
@@ -121,7 +101,6 @@ const deletePartTree = () => {
     &__icon {
         height: 90%;
         border-right: 12px;
-
         &_click {
             @include click-icon;
         }

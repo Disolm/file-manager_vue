@@ -45,11 +45,12 @@ const iconSrc = computed<string>(() => {
 </script>
 
 <template>
-    <img class="icon" :alt="icon" :src="iconSrc"/>
+    <img class="icon" :alt="icon" :src="iconSrc" draggable="false"/>
 </template>
 
 <style scoped lang="scss">
 .icon {
     display: block;
+    user-select: none;
 }
 </style>
