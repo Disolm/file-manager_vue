@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import UiIcon from "@/components/UiIcon.vue";
-import {TypePath} from "@/types/types";
+import type {TypePath} from "@/types/types";
 import type {Ref} from 'vue'
 import {ref} from 'vue'
 import {useStore} from "vuex";
