@@ -5,6 +5,7 @@ import type {Ref} from 'vue'
 import type {IFolderTree, TypePath} from '@/types/types'
 import EditNameFileOrFolder from "@/components/EditNameFileOrFolder.vue";
 import DeletePartTree from "@/components/DeletePartTree.vue";
+import AddPartTree from "@/components/AddPartTree.vue";
 
 
 interface IProps {
@@ -62,21 +63,22 @@ const openOrCloseNameEditor = () => {
             icon="pencil"
             class="file-or-folder__icon file-or-folder__icon_click"
         />
-        <!-- Приложение можно расширить чтобы создавать папки и файлы-->
-        <!--        <UiIcon-->
-        <!--            v-if="directory?.type === 'directory'"-->
-        <!--            icon="add-file"-->
-        <!--            class="file-or-folder__icon file-or-folder__icon_click"-->
-        <!--        />-->
-        <!--        <UiIcon-->
-        <!--            v-if="directory?.type === 'directory'"-->
-        <!--            icon="add-folder"-->
-        <!--            class="file-or-folder__icon file-or-folder__icon_click"-->
-        <!--        />-->
-        <DeletePartTree
-            v-if="!nameEdited"
-            :path="path"
-        />
+        <!-- Приложение можно расширить чтобы добавлять и файлы-->
+        <!--                <UiIcon-->
+        <!--                    v-if="directory?.type === 'directory'"-->
+        <!--                    icon="add-file"-->
+        <!--                    class="file-or-folder__icon file-or-folder__icon_click"-->
+        <!--                />-->
+        <template v-if="!nameEdited">
+            <AddPartTree
+                v-if="directory?.type === 'directory'"
+                :path="path"
+            />
+            <DeletePartTree
+                :path="path"
+            />
+        </template>
+
     </div>
 </template>
 
@@ -99,11 +101,7 @@ const openOrCloseNameEditor = () => {
     }
 
     &__icon {
-        height: 90%;
-        border-right: 12px;
-        &_click {
-            @include click-icon;
-        }
+        @include icon-edit
     }
 }
 </style>

@@ -51,14 +51,19 @@ const clickStop = () => {
         @mouseup="clickStop"
         @mouseout="clickStop"
         icon="trash-bin"
-        class="edit-name-file-or-folder__icon edit-name-file-or-folder__icon_click"
+        class="delete-part-tree__icon delete-part-tree__icon_click"
         :class="{'timer-del': isClick}"
     />
 </template>
 
 <style scoped lang="scss">
-.timer-del{
-    background: url("@/assets/icons/loading.svg") 100%;
-    background-size: cover;
+.delete-part-tree {
+    &__icon {
+        @include icon-edit
+    }
+}
+.timer-del {
+    background: url("@/assets/icons/loading.svg") 100% !important;
+    background-size: cover !important;
 }
 </style>

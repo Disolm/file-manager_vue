@@ -1,3 +1,11 @@
+@mixin icon-edit {
+    height: 90%;
+    border-right: 12px;
+    &_click {
+        @include click-icon;
+    }
+}
+
 @mixin click-icon {
     cursor: pointer;
 
