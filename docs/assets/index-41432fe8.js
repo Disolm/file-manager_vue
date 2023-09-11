@@ -3667,7 +3667,8 @@ function tf(e, t) {
     return [n, r, s]
 }
 
-const nf = "https://disolm.github.io/file-manager_vue/assets/logo-267386d8.svg", Wi = e => (is("data-v-ac22a7d5"), e = e(), cs(), e), rf = {class: "logo"},
+const nf = "https://disolm.github.io/file-manager_vue/assets/logo-267386d8.svg",
+    Wi = e => (is("data-v-ac22a7d5"), e = e(), cs(), e), rf = {class: "logo"},
     sf = Wi(() => vt("img", {src: nf, alt: "file-manager", class: "logo__image"}, null, -1)),
     of = Wi(() => vt("span", {class: "logo__title"}, Uo("file manager"), -1)), cf = bt({
         __name: "MainLogo", setup(e) {
@@ -3763,11 +3764,13 @@ const Kf = at(Df, [["render", Hf], ["__scopeId", "data-v-edb55016"]]), qf = ef({
         component: () => Eo(() => import("./FileManagerView-421d3220.js"), ["assets/FileManagerView-421d3220.js", "assets/FileManagerView-2fb1c931.css"]),
         redirect: {name: "file.empty"},
         children: [{path: "", name: "file.empty", component: jf}, {path: ":pathId", name: "file.info", component: Kf}]
-    }, {
-        path: "/:pathMatch(.*)*",
-        name: "NotFound",
-        component: () => Eo(() => import("./NotFoundView-e536de7b.js"), ["assets/NotFoundView-e536de7b.js", "assets/NotFoundView-071816b8.css"])
-    }]
+    },
+        // {
+        //     path: "/:pathMatch(.*)*",
+        //     name: "NotFound",
+        //     component: () => Eo(() => import("./NotFoundView-e536de7b.js"), ["assets/NotFoundView-e536de7b.js", "assets/NotFoundView-071816b8.css"])
+        // }
+    ]
 });/*!
  * vuex v4.0.2
  * (c) 2021 Evan You
