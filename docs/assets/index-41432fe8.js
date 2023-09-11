@@ -3757,7 +3757,7 @@ function Hf(e, t) {
 }
 
 const Kf = at(Df, [["render", Hf], ["__scopeId", "data-v-edb55016"]]), qf = ef({
-    history: ya("file-manager_vue/"),
+    history: ya("/"),
     routes: [{path: "file-manager_vue/", name: "home", redirect: {name: "file-manager"}}, {
         path: "file-manager_vue/fileManager",
         name: "file-manager",
