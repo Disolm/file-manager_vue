@@ -1,0 +1,27 @@
+.not-found[data-v-9c66db34] {
+    padding: 100px 0
+}
+
+.not-found__title[data-v-9c66db34] {
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--body-color)
+}
+
+.not-found__status-code[data-v-9c66db34] {
+    display: block;
+    font-size: 144px
+}
+
+@media all and (max-width: 767px) {
+    .not-found__title[data-v-9c66db34] {
+        font-size: 36px
+    }
+
+    .not-found__status-code[data-v-9c66db34] {
+        font-size: 108px
+    }
+}

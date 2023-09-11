@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none
+}
+
+*, *:before, *:after {
+    box-sizing: border-box
+}
+
+a, a:link, a:visited, a:hover {
+    text-decoration: none
+}
+
+aside, nav, footer, header, section, main {
+    display: block
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit
+}
+
+ul, ul li {
+    list-style: none
+}
+
+img {
+    vertical-align: top
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto
+}
+
+address {
+    font-style: normal
+}
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent
+}
+
+input::-ms-clear {
+    display: none
+}
+
+button, input[type=submit] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer
+}
+
+input:focus, input:active, button:focus, button:active {
+    outline: none
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+label {
+    cursor: pointer
+}
+
+legend {
+    display: block
+}
+
+@font-face {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://disolm.github.io/file-manager_vue/assets/Nunito-cyrillic-ext-135a2a07.woff2) format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+}
+
+:root {
+    --body-color: #34423f;
+    --white: #fff;
+    --grey: #cbd4e9;
+    --grey-light: #f8f9fc;
+    --grey-2: #dee1e1;
+    --grey-3: #ced4d3;
+    --grey-8: #5e706c;
+    --blue: #4c6bb6;
+    --blue-2: #688dc0;
+    --blue-light: #b8c5e2;
+    --blue-extra: #eaedf7;
+    --red: #db3851;
+    --red-light: #e8656f;
+    --green: #24a37e;
+    --green-light: #dff2ec;
+    --default-cover: url(https://disolm.github.io/file-manager_vue/assets/not-found-56133ff9.png)
+}
+
+.logo__link[data-v-ac22a7d5] {
+    display: block;
+    text-align: center;
+    margin: 12px auto;
+    text-transform: uppercase;
+    color: var(--body-color);
+    text-decoration: none
+}
+
+.logo__image[data-v-ac22a7d5] {
+    height: 30px;
+    margin-right: 12px
+}
+
+.logo__title[data-v-ac22a7d5] {
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 30px
+}
+
+.header[data-v-7749ca8d] {
+    background-color: var(--green);
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column
+}
+
+.container[data-v-7ba4919b] {
+    max-width: 1008px;
+    width: 100%;
+    margin: 0 auto
+}
+
+@media all and (max-width: 992px) {
+    .container[data-v-7ba4919b] {
+        padding: 0 16px
+    }
+}
+
+.footer[data-v-c6a62aaa] {
+    background: var(--blue-light);
+    padding: 12px 0;
+    text-align: center
+}
+
+.wrapper[data-v-7ed45cbb] {
+    background-color: var(--grey-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+.main[data-v-7ed45cbb] {
+    flex: 1 0 auto;
+    display: flex
+}
+
+header {
+    line-height: 1.5;
+    max-height: 100vh
+}
+
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        place-items: center
+    }
+}
+
+.file-info-empty-view[data-v-a6bf4df7], .file-info-empty-view[data-v-edb55016] {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}

@@ -1,0 +1,41 @@
+<svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" class="svg-loader">
+    <g class="svg-container">
+        <circle class="loader-svg bg" cx="18" cy="18" r="16" fill="none" stroke-width="3px" stroke="#E0E3E9">
+        </circle>
+        <circle class="loader-svg animate" id="inner" cx="18" cy="18" r="16" fill="none" stroke-width="2px" stroke="#6B04A8">
+        </circle>
+    </g>
+    <style>
+        .loader-svg{
+        position: absolute;
+        left: 0; right: 0; top: 0; bottom: 0;
+        fill: none;
+        stroke-width: 3px;
+        stroke-linecap: round;
+        stroke: rgb(64, 0, 148);
+        }
+        .loader-svg.bg{
+        stroke-width: 5px;
+        stroke: rgb(207, 205, 245);
+        }
+        .animate{
+        stroke-dasharray: 242.6;
+        animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+        }
+
+        @keyframes fill-animation{
+        0%{
+        stroke-dasharray: 40 242.6;
+        stroke-dashoffset: 0;
+        }
+        50%{
+        stroke-dasharray: 141.3;
+        stroke-dashoffset: 141.3;
+        }
+        100%{
+        stroke-dasharray: 40 242.6;
+        stroke-dashoffset: 282.6;
+        }
+        }
+    </style>
+</svg>
