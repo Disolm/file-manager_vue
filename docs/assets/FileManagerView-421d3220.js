@@ -23,7 +23,7 @@ import {
     p as U,
     q as G,
     R as L
-} from "./index-41432fe8.js";
+} from "https://disolm.github.io/file-manager_vue/assets/index-41432fe8.js";
 
 const R = {}, z = {class: "sidebar"};
 

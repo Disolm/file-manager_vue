@@ -5582,7 +5582,7 @@ const wr = {filesTree: null, finallyRequest: !1}, wh = {
         }
     }, actions: {
         async fetchFile({commit: e}) {
-            const t = "./src/api/json/files-tree.json";
+            const t = "https://disolm.github.io/file-manager_vue/assets/files-tree.json";
             wr.finallyRequest = !1, await Mo.get(t).then(n => {
                 e("setFileData", n.data)
             }).catch(n => {
